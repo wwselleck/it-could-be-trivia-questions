@@ -1,0 +1,17 @@
+{
+  "name": "trivia-questions",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/it-could-be/trivia-questions.git",
+  "author": "<wwselleck@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "ajv": "^6.7.0",
+    "get-stdin": "^6.0.0",
+    "get-stream": "^4.1.0",
+    "toml": "^2.3.5"
+  },
+  "devDependencies": {
+    "glob": "^7.1.3"
+  }
+}

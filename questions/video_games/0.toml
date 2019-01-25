@@ -2,7 +2,7 @@
 question_type_id = "single_answer"
 category_id = "video_games"
 [[questions.detail]]
-text = "Which Pokemon has the lowest total base stats?"
+text = "Which Ghost-type Pokemon has the lowest total base stats?"
 answer = "Shedninja"
 
 [[questions]]
@@ -10,7 +10,7 @@ question_type_id = "multiple_answer"
 category_id = "video_games"
 [[questions.detail]]
 text = "Who were the main characters in Donkey Kong Country 3?"
-answers = ["Dixie Kong", "Kiddy Kong"]
+answer = ["Dixie Kong", "Kiddy Kong"]
 
 [[questions]]
 question_type_id = "multiple_choice"
@@ -18,4 +18,27 @@ category_id = "video_games"
 [[questions.detail]]
 text = "Which of these courses did not appear in Mario Kart 64?"
 choices = ["Kalimari Desert", "Choco Mountain", "Sherbet Land", "Yoshi Circuit"]
-answer = ["Yoshi Circuit"]
+answer = "Yoshi Circuit"
+
+[[questions]]
+question_type_id = "single_answer"
+category_id = "video_games"
+[[questions.detail]]
+text = "What is the only Pokemon to have a lower base state total than its pre-evolved form?"
+answer = "Shedninja"
+
+[[questions]]
+question_type_id = "single_answer"
+category_id = "video_games"
+[[questions.detail]]
+text = "What is the best selling Nintendo 64 game that was never bundled with the console?"
+answer = "Mario Kart 64"
+
+[[questions]]
+question_type_id = "single_answer"
+category_id = "video_games"
+[[questions.detail]]
+text = "Name the top 5 selling games for the Nintendo 64"
+answer = [ "Super Mario 64", "Mario Kart 64", "Golden Eye 007", "The Legend of Zelda: Ocarina of Time", "Super Smash Bros." ]
+
+
