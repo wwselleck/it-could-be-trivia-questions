@@ -1,0 +1,13 @@
+[[questions]]
+question_type_id = "multiple_answer"
+category_id = "video_games"
+[questions.detail]
+text = "Name the top 5 selling games for the Nintendo 64"
+answer = [ "Super Mario 64", "Mario Kart 64", "Golden Eye 007", "The Legend of Zelda: Ocarina of Time", "Super Smash Bros." ]
+
+[[questions]]
+question_type_id = "multiple_answer"
+category_id = "video_games"
+[questions.detail]
+text = "Who were the main characters in Donkey Kong Country 3?"
+answer = ["Dixie Kong", "Kiddy Kong"]

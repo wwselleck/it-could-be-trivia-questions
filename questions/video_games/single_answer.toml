@@ -1,0 +1,20 @@
+[[questions]]
+question_type_id = "single_answer"
+category_id = "video_games"
+[questions.detail]
+text = "What is the only Pokemon to have a lower base state total than its pre-evolved form?"
+answer = "Shedninja"
+
+[[questions]]
+question_type_id = "single_answer"
+category_id = "video_games"
+[questions.detail]
+text = "What is the best selling Nintendo 64 game that was never bundled with the console?"
+answer = "Mario Kart 64"
+
+[[questions]]
+question_type_id = "single_answer"
+category_id = "video_games"
+[questions.detail]
+text = "Which Ghost-type Pokemon has the lowest total base stats?"
+answer = "Shedninja"

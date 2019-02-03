@@ -6,12 +6,9 @@
   "author": "<wwselleck@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "ajv": "^6.7.0",
-    "get-stdin": "^6.0.0",
-    "get-stream": "^4.1.0",
-    "toml": "^2.3.5"
   },
   "devDependencies": {
+    "toml": "^2.3.5",
     "glob": "^7.1.3"
   }
 }
