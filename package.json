@@ -1,10 +1,16 @@
 {
-  "name": "trivia-questions",
+  "name": "@it-could-be/trivia-questions",
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/it-could-be/trivia-questions.git",
   "author": "<wwselleck@gmail.com>",
   "license": "MIT",
+  "files": ["lib", "dist"],
+  "main": "lib/index.js",
+  "scripts": {
+    "validate": "node ./scripts/validate.js",
+    "build": "node ./scripts/build.js"
+  },
   "dependencies": {
   },
   "devDependencies": {

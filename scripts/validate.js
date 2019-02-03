@@ -12,6 +12,9 @@ async function validate() {
     results[question.filePath] = result;
   }
   console.log(results);
+  if (Object.values(results).some(r => !r.valid)) {
+    process.exit(1);
+  }
 }
 
 async function validateFile(data) {
