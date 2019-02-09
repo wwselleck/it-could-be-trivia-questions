@@ -46,7 +46,12 @@ const MultipleChoiceValidator = createQuestionValidator(question => {
 
 const SingleAnswerValidator = createQuestionValidator(question => {
   return {
-    valid: Boolean(question.detail.text && question.detail.answer)
+    valid: Boolean(
+      question.detail.text &&
+        question.detail.text.length > 0 &&
+        question.detail.answer &&
+        Array.isArray(question.detail.answer)
+    )
   };
 });
 
