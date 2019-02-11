@@ -1,4 +1,5 @@
 const fs = require("fs");
+const uuidv4 = require("uuid/v4");
 const { readQuestionsFlattened } = require("./util");
 
 async function writeQuestions(questions) {
@@ -12,8 +13,19 @@ async function writeQuestions(questions) {
   });
 }
 
+function assignQuestionIds(questions) {
+  return questions.map(q => {
+    return {
+      ...q,
+      id: uuidv4()
+    };
+  });
+}
+
 async function build() {
-  const questions = await readQuestionsFlattened();
+  let questions = await readQuestionsFlattened();
+  questions = assignQuestionIds(questions);
+
   await writeQuestions(questions);
 }
 
