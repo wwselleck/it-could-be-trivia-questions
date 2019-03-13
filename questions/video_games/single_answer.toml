@@ -58,5 +58,40 @@ answer = ["Super Mario Bros.", "SMB", "SMB1", "SMB 1"]
 question_type_id = "single_answer"
 category_id = "video_games"
 [questions.detail]
+text = "What game did Waluigi first appear in?"
+answer = ["Mario Tennis"]
+
+[[questions]]
+question_type_id = "single_answer"
+category_id = "video_games"
+[questions.detail]
+text = "What is the name of the first Bowser level in Super Mario 64?"
+answer = ["Bowser in the Dark World", "BITDW", "Dark World"]
+
+[[questions]]
+question_type_id = "single_answer"
+category_id = "video_games"
+[questions.detail]
+text = "In Super Mario Sunshine, a certain mission in what world must you complete before Yoshi is unlocked."
+answer = ["Pinna Park"]
+
+[[questions]]
+question_type_id = "single_answer"
+category_id = "video_games"
+[questions.detail]
+text = "The name of your boat in The Legend of Zelda: Wind Waker is 'The King of Red ___'?"
+answer = ["Lions"]
+
+[[questions]]
+question_type_id = "single_answer"
+category_id = "video_games"
+[questions.detail]
+text = "What game did Toadette first appear in?"
+answer = ["Mario Kart: Double Dash", "MKDD", "Mario Kart Double Dash"]
+
+[[questions]]
+question_type_id = "single_answer"
+category_id = "video_games"
+[questions.detail]
 text = "What was the most recent game to feature Donkey Kong Jr. as a playable character?"
 answer = ["Mario Tennis"]
