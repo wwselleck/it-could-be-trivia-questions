@@ -11,10 +11,7 @@ async function validate() {
     let result = await validateFile(data);
     results[question.filePath] = result;
   }
-  console.log(results);
-  if (Object.values(results).some(r => !r.valid)) {
-    process.exit(1);
-  }
+  return results;
 }
 
 async function validateFile(data) {
@@ -74,8 +71,8 @@ const TopLevelRequiredValidators = {
     valid:
       typeof val === "string" && val.length > 0 && val in QuestionTypeValidators
   }),
-  category_id: val => ({
-    valid: Boolean(typeof val === "string" && val.length)
+  tags: val => ({
+    valid: Boolean(Array.isArray(val) && val.length)
   })
 };
 
@@ -118,7 +115,11 @@ async function topLevelValidator(data) {
 if (require.main === module) {
   (async () => {
     try {
-      await validate();
+      let results = await validate();
+      console.log(results)
+      if (Object.values(results).some(r => !r.valid)) {
+        process.exit(1);
+      }
     } catch (e) {
       console.error(e);
     }

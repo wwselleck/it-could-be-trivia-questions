@@ -12,7 +12,7 @@ export const enum QuestionType {
 export interface BaseQuestion {
   id: string;
   question_type_id: string;
-  category_id: string;
+  tags: Array<string>;
   detail: Object;
 }
 
@@ -32,8 +32,6 @@ export interface MultipleChoiceQuestion extends BaseQuestion {
     answer: string;
   };
 }
-
-export type SingleAnswerQuestion = SingleAnswerQuestion.SingleAnswerQuestion;
 
 export type Question =
   | MultipleAnswerQuestion
@@ -62,3 +60,5 @@ export function verifyAnswer(question: Question, answer: Answer) {
       throw new Error("Invalid question type");
   }
 }
+
+export { SingleAnswerQuestion };

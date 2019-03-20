@@ -9,10 +9,11 @@
     "lib",
     "dist"
   ],
+  "types": "./dist/index.d.ts",
   "scripts": {
     "clean": "rm -rf dist",
     "validate": "node ./scripts/validate.js",
-    "build": "yarn validate && yarn clean && mkdir dist && node ./scripts/build.js && tsc",
+    "build": "yarn validate && yarn clean && mkdir dist && node ./scripts/build.js && tsc --declaration",
     "test": "mocha -r espower-typescript/guess \"lib/**/*.test.ts\""
   },
   "directories": {

@@ -5,7 +5,7 @@ import * as TriviaQuestion from "./index";
 let singleAnswerQuestion: TriviaQuestion.SingleAnswerQuestion = {
   id: "abc",
   question_type_id: TriviaQuestion.QuestionType.SingleAnswer,
-  category_id: "whocares",
+  tags: ["whocares"],
   detail: {
     text: "a question",
     answer: ["AnAnswer"]

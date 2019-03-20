@@ -8,11 +8,23 @@ export interface SingleAnswerQuestion extends BaseQuestion {
   };
 }
 
+export type AnswerResult = {
+  isCorrect: boolean;
+  isExactAnswer: boolean;
+  exactAnswer: string;
+};
+
 export function verifyAnswer(
   question: SingleAnswerQuestion,
   answer: Answer
-): boolean {
-  return question.detail.answer.some(correctAnswer => {
+): AnswerResult {
+  let isCorrect = question.detail.answer.some(correctAnswer => {
     return correctAnswer.toLowerCase() === answer.toLowerCase();
   });
+  let exactAnswer = question.detail.answer[0];
+  return {
+    isCorrect,
+    exactAnswer,
+    isExactAnswer: answer === exactAnswer
+  };
 }
