@@ -1,11 +1,13 @@
 {
     "compilerOptions": {
         "module": "commonjs",
-        "lib": ["es7", "es2017.object", "esnext"],
+        "lib": ["es7", "esnext"],
         "moduleResolution": "node",
         "target": "es6",
-        "strict": true,
-        "target": "es6",
-        "outDir": "dist"
-    }
+        "outDir": "dist",
+        "declaration": true
+    },
+    "include": [
+        "lib/index.ts"
+    ]
 }

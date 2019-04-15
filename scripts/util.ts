@@ -2,15 +2,19 @@ const fs = require("fs");
 const toml = require("toml");
 const glob = require("glob");
 
-const QUESTIONS_GLOB = "./questions/**/*.toml";
+const uuidv4 = require("uuid/v4");
 
-function tomlToJson(tomlString) {
+import { Question, PartialQuestion } from "../lib/types";
+
+const QUESTIONS_GLOB = "./questions/raw/**/*.toml";
+
+export function tomlToJson(tomlString: string) {
   return toml.parse(tomlString);
 }
 
-async function getQuestionFilePaths() {
+export async function getQuestionFilePaths(): Promise<Array<string>> {
   return new Promise((resolve, reject) => {
-    glob(QUESTIONS_GLOB, {}, (err, files) => {
+    glob(QUESTIONS_GLOB, {}, (err: any, files: any) => {
       if (err) {
         reject(`idk m8 ${err.toString()}`);
       }
@@ -19,9 +23,9 @@ async function getQuestionFilePaths() {
   });
 }
 
-async function readFile(filePath) {
+export async function readFile(filePath: any): Promise<string> {
   return new Promise((resolve, reject) => {
-    fs.readFile(filePath, "utf-8", (err, data) => {
+    fs.readFile(filePath, "utf-8", (err: any, data: any) => {
       if (err) {
         reject(err);
       }
@@ -39,7 +43,7 @@ async function readFile(filePath) {
  *   }
  * ]
  */
-async function readQuestions() {
+export async function readQuestions() {
   const filePaths = await getQuestionFilePaths();
   let pathsToData = filePaths.map(async filePath => {
     let tomlString = await readFile(filePath);
@@ -60,7 +64,7 @@ async function readQuestions() {
  *   }
  * ]
  */
-async function readQuestionsFlattened() {
+export async function readQuestionsFlattened() {
   let questions = await readQuestions();
   const flattened = questions.reduce((acc, curr) => {
     return [...acc, ...curr.data.questions];
@@ -68,10 +72,13 @@ async function readQuestionsFlattened() {
   return flattened;
 }
 
-module.exports = {
-  tomlToJson,
-  getQuestionFilePaths,
-  readFile,
-  readQuestions,
-  readQuestionsFlattened
-};
+function assignQuestionId(question: PartialQuestion) {
+  return {
+    ...question,
+    id: uuidv4()
+  };
+}
+
+export function hydrateQuestion(q: PartialQuestion): Question {
+  return assignQuestionId(q);
+}

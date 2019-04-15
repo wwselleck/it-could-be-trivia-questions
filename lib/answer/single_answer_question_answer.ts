@@ -1,12 +1,5 @@
-import { BaseQuestion, Answer, QuestionType } from "./index";
-
-export interface SingleAnswerQuestion extends BaseQuestion {
-  question_type_id: QuestionType.SingleAnswer;
-  detail: {
-    text: string;
-    answer: Array<string>;
-  };
-}
+import { AnswerInput } from "../index";
+import { SingleAnswerQuestion } from "../types";
 
 export type AnswerResult = {
   isCorrect: boolean;
@@ -16,7 +9,7 @@ export type AnswerResult = {
 
 export function verifyAnswer(
   question: SingleAnswerQuestion,
-  answer: Answer
+  answer: AnswerInput
 ): AnswerResult {
   let isCorrect = question.detail.answer.some(correctAnswer => {
     return correctAnswer.toLowerCase() === answer.toLowerCase();
@@ -27,4 +20,8 @@ export function verifyAnswer(
     exactAnswer,
     isExactAnswer: answer === exactAnswer
   };
+}
+
+export function getAnswer(question: SingleAnswerQuestion) {
+  return question.detail.answer[0];
 }

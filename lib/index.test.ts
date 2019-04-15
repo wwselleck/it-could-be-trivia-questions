@@ -14,20 +14,26 @@ let singleAnswerQuestion: TriviaQuestion.SingleAnswerQuestion = {
 
 describe("Trivia Questions Library", () => {
   describe("getQuestionById", () => {});
-  describe("verifyAnswer", () => {
+  describe("Answer", () => {
     describe("SingleAnswerQuestion", () => {
       it("should accept exact casing", () => {
         let question = singleAnswerQuestion;
         let answer = "AnAnswer";
-        let result = TriviaQuestion.verifyAnswer(question, answer);
-        assert(result === true);
+        let result = TriviaQuestion.Answer.SingleAnswerQuestion.verifyAnswer(
+          question,
+          answer
+        );
+        assert(result.isCorrect === true);
       });
 
       it("should accept different casing ", () => {
         let question = singleAnswerQuestion;
         let answer = "anANsWer";
-        let result = TriviaQuestion.verifyAnswer(question, answer);
-        assert(result === true);
+        let result = TriviaQuestion.Answer.SingleAnswerQuestion.verifyAnswer(
+          question,
+          answer
+        );
+        assert(result.isCorrect === true);
       });
     });
   });
