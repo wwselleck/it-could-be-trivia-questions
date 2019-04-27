@@ -3,8 +3,9 @@ import pino = require("pino");
 import uuidv4 = require("uuid/v4");
 import { readQuestionsFlattened } from "./util";
 import { generate } from "./generate";
-import { Question, PartialQuestion } from "../lib/types";
-import { isPartialQuestion } from "../lib/is";
+import { Question } from "../lib/types";
+import { RawQuestion } from "./types";
+import { isRawQuestion } from "./is";
 
 let logger = pino();
 
@@ -19,41 +20,37 @@ async function writeQuestions(questions: Array<Question>) {
   });
 }
 
-function assignQuestionIds(
-  questions: Array<PartialQuestion>
-): Array<PartialQuestion & { id: string }> {
-  return questions.map(q => {
-    return {
-      ...q,
-      id: uuidv4()
-    };
-  });
+function assignQuestionId(question: RawQuestion) {
+  return {
+    ...question,
+    id: uuidv4()
+  };
 }
 
 async function build() {
-  let rawQuestions: Array<unknown> = await readQuestionsFlattened();
-  let generatedQuestions: Array<unknown> = await generate();
+  let staticQuestions: Array<unknown> = await readQuestionsFlattened();
+  let generatedQuestions: Array<RawQuestion> = await generate();
 
-  let unknownQuestions: Array<unknown> = [
-    ...rawQuestions,
+  let uncheckedRawQuestions: Array<unknown> = [
+    ...staticQuestions,
     ...generatedQuestions
   ];
 
   // TODO: The `as` casting here isn't particularly safe. Should actually
   // set it up so `isQuestion` converts this from Array<unknown>
   // to Array<PartialQuestion>
-  let partialQuestions: Array<PartialQuestion> = unknownQuestions.filter(
+  let rawQuestions: Array<RawQuestion> = uncheckedRawQuestions.filter(
     (uq: unknown) => {
-      if (isPartialQuestion(uq)) {
+      if (isRawQuestion(uq)) {
         return true;
       } else {
         logger.warn({ uq }, "Dropping invalid question");
         return false;
       }
     }
-  ) as Array<PartialQuestion>;
+  ) as Array<RawQuestion>;
 
-  let hydratedQuestions = assignQuestionIds(partialQuestions);
+  let hydratedQuestions = rawQuestions.map(assignQuestionId);
 
   await writeQuestions(hydratedQuestions);
 }

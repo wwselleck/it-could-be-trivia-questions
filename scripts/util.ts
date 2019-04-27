@@ -4,7 +4,7 @@ const glob = require("glob");
 
 const uuidv4 = require("uuid/v4");
 
-import { Question, PartialQuestion } from "../lib/types";
+import { Question } from "../lib/types";
 
 const QUESTIONS_GLOB = "./questions/raw/**/*.toml";
 
@@ -70,15 +70,4 @@ export async function readQuestionsFlattened() {
     return [...acc, ...curr.data.questions];
   }, []);
   return flattened;
-}
-
-function assignQuestionId(question: PartialQuestion) {
-  return {
-    ...question,
-    id: uuidv4()
-  };
-}
-
-export function hydrateQuestion(q: PartialQuestion): Question {
-  return assignQuestionId(q);
 }

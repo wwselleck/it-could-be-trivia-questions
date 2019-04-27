@@ -4,8 +4,6 @@ export const enum QuestionType {
   MultipleChoice = "multiple_choice"
 }
 
-type QuestionAutoFields = "id";
-
 interface AutoFields {
   id: string;
 }
@@ -45,24 +43,3 @@ export type Question =
   | MultipleAnswerQuestion
   | SingleAnswerQuestion
   | MultipleChoiceQuestion;
-
-export type PartialMultipleAnswerQuestion = WithoutAutoFields<
-  MultipleAnswerQuestion
->;
-export type PartialSingleAnswerQuestion = WithoutAutoFields<
-  SingleAnswerQuestion
->;
-export type PartialMultipleChoiceQuestion = WithoutAutoFields<
-  MultipleChoiceQuestion
->;
-
-export type PartialQuestion =
-  | PartialMultipleChoiceQuestion
-  | PartialMultipleAnswerQuestion
-  | PartialSingleAnswerQuestion;
-
-// https://stackoverflow.com/questions/48215950/exclude-property-from-type
-export type WithoutAutoFields<T extends Question> = Pick<
-  T,
-  Exclude<keyof T, QuestionAutoFields>
->;

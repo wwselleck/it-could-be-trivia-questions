@@ -14,7 +14,7 @@ export function isPartialSingleAnswerQuestion(
       o["question_type_id"] === QuestionType.SingleAnswer &&
       o["detail"] &&
       typeof o["detail"]["text"] === "string" &&
-      typeof Array.isArray(o["detail"]["answer"]) &&
+      Array.isArray(o["detail"]["answer"]) &&
       o["detail"]["answer"].length > 0
   );
 }

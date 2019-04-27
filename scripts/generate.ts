@@ -2,14 +2,8 @@ import glob = require("glob");
 import pino = require("pino");
 import { readFile, tomlToJson } from "./util";
 import util = require("util");
-import {
-  SingleAnswerQuestion,
-  QuestionType,
-  Question,
-  WithoutAutoFields,
-  PartialQuestion
-} from "../lib/types";
-import { isPartialQuestion } from "../lib/is";
+import { SingleAnswerQuestion, QuestionType, Question } from "../lib/types";
+import { RawQuestion, RawSingleAnswerQuestion } from "./types";
 
 let logger = pino();
 
@@ -35,33 +29,30 @@ type SingleAnswerQuestionTemplate = {
   data: Array<{
     // The values to provide the question text printf string
     values: Array<string>;
-    answer: Array<string>;
+    answer?: Array<string>;
+    answerKey: string;
   }>;
   template: {
     question_type_id: QuestionType.SingleAnswer;
     tags: Array<string>;
-    detail: {
-      // A printf style string that will be formatted using
-      // `values`
-      text: string;
-    };
+    // A printf style string that will be formatted using
+    // `values`
+    text: string;
   };
 };
 
 type Template = SingleAnswerQuestionTemplate;
 
 /**
- * A QuestionGenerator takes a template, and returns an array of partial questions
- * (Partial, because the real question types don't necessarily match the strucutre we return here. For example, the questions won't have an ID at this point.)
- *
+ * A QuestionGenerator takes a template, and returns an array of raw questions
  */
-type QuestionGenerator<T extends Template, U extends Question> = (
+type QuestionGenerator<T extends Template, U extends RawQuestion> = (
   template: T
-) => Array<WithoutAutoFields<U>>;
+) => Array<U>;
 
 const singleAnswerQuestionGenerator: QuestionGenerator<
   SingleAnswerQuestionTemplate,
-  SingleAnswerQuestion
+  RawSingleAnswerQuestion
 > = (template: SingleAnswerQuestionTemplate) => {
   let partialQuestion = {
     question_type_id: template.template.question_type_id,
@@ -72,14 +63,14 @@ const singleAnswerQuestionGenerator: QuestionGenerator<
     return {
       ...partialQuestion,
       detail: {
-        text: util.format(template.template.detail.text, ...d.values),
+        text: util.format(template.template.text, ...d.values),
         answer: d.answer
       }
     };
   });
 };
 
-export async function generate(): Promise<Array<unknown>> {
+export async function generate(): Promise<Array<RawQuestion>> {
   let templateFilePaths: Array<string> = await getTemplatesFilePaths();
 
   // TODO: Add type guarding here to ensure only valid
@@ -90,7 +81,7 @@ export async function generate(): Promise<Array<unknown>> {
     })
   );
 
-  const generatedQuestions: Array<unknown> = templateData
+  const generatedQuestions: Array<RawQuestion> = templateData
     .map(td => {
       if (td.template.question_type_id === QuestionType.SingleAnswer) {
         // No actual type enforcement happening with this argument.
@@ -99,6 +90,7 @@ export async function generate(): Promise<Array<unknown>> {
       }
       return null;
     })
+    .filter(x => x)
     .flat();
 
   return generatedQuestions;
