@@ -1,11 +1,14 @@
 [[data]]
-values = ["Mario", "Dry Bones"]
-answer = ["Super Mario Bros. 3", "Super Mario Bros 3", "SMB3", "SMB 3"]
+values = ["Nintendo", "Banjo"]
+answer = ["Diddy Kong Racing"]
 
+[[data]]
+values = ["Nintendo", "Conker"]
+answer = ["Diddy Kong Racing"]
 
 [template]
 question_type_id = "single_answer"
 tags = ["video_games"]
-text = "The %s series character %s made their first appearance in which game?"
+text = "The %s character %s made their first appearance in which game?"
 
 

@@ -1,10 +1,9 @@
 import { Question, QuestionType } from "./types";
-const questions = require("./questions.json") as Array<Question>;
 import * as Answer from "./answer";
 
 export type AnswerInput = string;
 
-export function getRandomQuestion(): Question {
+export function getRandomQuestion(questions: Array<Question>): Question {
   //temp
   let filteredQuestions = questions.filter(
     q => q.question_type_id === QuestionType.SingleAnswer
@@ -14,7 +13,10 @@ export function getRandomQuestion(): Question {
   return filteredQuestions[index];
 }
 
-export function getQuestionById(id: string): Question | null {
+export function getQuestionById(
+  questions: Array<Question>,
+  id: string
+): Question | null {
   return questions.find((q: Question) => q.id === id) || null;
 }
 
