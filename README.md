@@ -33,7 +33,9 @@ From there, you have the specific kinds of questions. There are a few different 
 These are questions that have one answer. For example...
 
 > What was the first city to reach a population of 1 million? (Rome)
+
 > What was the highest selling game on the PlayStation 2 (Grand Theft Auto: San Andreas)
+
 > Who is the creator of the Python programming language? (Guido van Rossum)
 
 ```json5
@@ -55,7 +57,9 @@ These are questions that have one answer. For example...
 These are questions that have multiple correct answers. For example...
 
 > Name every colony in the original 13 U.S. colonies.
+
 > Name the Top 5 highest selling vidoe game consoles of all-time.
+
 > Name the 5 women who were on the winning 2016 Summer Olympics U.S. women's gymnastics team.
 
 ```json5
