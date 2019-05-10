@@ -11,7 +11,7 @@ ICBTQ exports two things:
 ## Questions
 Every question has the same top level structure
 
-```json
+```json5
 {
     // The kind of question it is
     question_type: 'single_answer'
@@ -36,7 +36,7 @@ These are questions that have one answer. For example...
 > What was the highest selling game on the PlayStation 2 (Grand Theft Auto: San Andreas)
 > Who is the creator of the Python programming language? (Guido van Rossum)
 
-```json
+```json5
 {
     question_type: 'single_answer'
     tags: ['video_games', 'pokemon']
@@ -58,7 +58,7 @@ These are questions that have multiple correct answers. For example...
 > Name the Top 5 highest selling vidoe game consoles of all-time.
 > Name the 5 women who were on the winning 2016 Summer Olympics U.S. women's gymnastics team.
 
-```json
+```json5
 {
     question_type: 'single_answer'
     tags: ['video_games', 'pokemon']
