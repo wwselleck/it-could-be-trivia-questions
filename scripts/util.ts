@@ -46,7 +46,13 @@ export async function readFile(filePath: any): Promise<string> {
 export async function readQuestions() {
   const filePaths = await getQuestionFilePaths();
   let pathsToData = filePaths.map(async filePath => {
-    let tomlString = await readFile(filePath);
+    let tomlString: string;
+    try {
+      tomlString = await readFile(filePath);
+    } catch (e) {
+      console.log(`Error reading file ${filePath}`);
+      throw e;
+    }
     return {
       data: tomlToJson(tomlString),
       filePath: filePath

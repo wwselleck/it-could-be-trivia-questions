@@ -3,11 +3,17 @@ import * as Answer from "./answer";
 
 export type AnswerInput = string;
 
-export function getRandomQuestion(questions: Array<Question>): Question {
-  //temp
-  let filteredQuestions = questions.filter(
-    q => q.question_type_id === QuestionType.SingleAnswer
-  );
+type GetQuestionFilter = {
+  types: Array<QuestionType>;
+};
+
+export function getRandomQuestion(
+  questions: Array<Question>,
+  filter?: GetQuestionFilter
+): Question {
+  let filteredQuestions = filter
+    ? questions.filter(q => filter.types.includes(q.question_type_id))
+    : questions;
   let numQuestions = filteredQuestions.length;
   let index = Math.floor(Math.random() * numQuestions);
   return filteredQuestions[index];

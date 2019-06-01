@@ -18,3 +18,25 @@ tags = ["video_games"]
 [questions.detail]
 text = "Name the 8 Pokemon with non-alphabetic characters in their name."
 answer = [["Nidoran♀"], ["Nidoran♂"], ["Farfetch'd"], ["Mr. Mime"], ["Porygon2"], ["Ho-oh"], ["Mime Jr."], ["Porygon-Z"]]
+
+[[questions]]
+question_type_id = "multiple_answer"
+tags = ["video_games"]
+[questions.detail]
+text = "Name the 16 Pokemon that appeared in Episode 1 of the Pokemon anime."
+answer = [  ['Pikachu'],
+            ['Nidorino'],
+            ['Onix'],
+            ['Gengar'],
+            ['Spearow'],
+            ['Ho-Oh', 'Ho Oh'],
+            ['Bulbasaur'],
+            ['Charmander'],
+            ['Squirtle'],
+            ['Pidgey'],
+            ['Rattata'],
+            ['Sandshrew'],
+            ['Mankey'],
+            ['Dodrio'],
+            ['Magikarp'],
+            ['Gyarados'],  ]

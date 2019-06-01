@@ -9,4 +9,13 @@ export interface RawSingleAnswerQuestion {
   };
 }
 
-export type RawQuestion = RawSingleAnswerQuestion;
+export interface RawMultipleAnswerQuestion {
+  question_type_id: QuestionType.MultipleAnswer;
+  tags: Array<string>;
+  detail: {
+    text: string;
+    answer: Array<Array<string>>;
+  };
+}
+
+export type RawQuestion = RawSingleAnswerQuestion | RawMultipleAnswerQuestion;

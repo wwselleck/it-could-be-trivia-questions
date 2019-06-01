@@ -95,3 +95,32 @@ tags = ["history"]
 [questions.detail]
 text = "What was the first city to reach a population of 1 million?"
 answer = ["Rome"]
+
+[[questions]]
+question_type_id = "single_answer"
+tags = ["video_games", "pokemon"]
+[questions.detail]
+text = "What fairy-type Pokemon has the highest base HP?"
+answer = ["Wigglytuff"]
+
+[[questions]]
+question_type_id = "single_answer"
+tags = ["video_games", "pokemon"]
+[questions.detail]
+text = "From Gen 3 onward, what were the color of the inside of a shiny Charizard's wings?"
+answer = ["Red"]
+
+[[questions]]
+question_type_id = "single_answer"
+tags = ["video_games", "pokemon"]
+[questions.detail]
+text = "Charizard was the inspiration for the name of 'Chilicola charizard', a species of what animal?"
+answer = ["Bees"]
+
+[[questions]]
+question_type_id = "single_answer"
+tags = ["video_games", "pokemon"]
+[questions.detail]
+text = "What is the only Pokemon whose base stat total does not change after evolution?"
+answer = ["Scyther"]
+

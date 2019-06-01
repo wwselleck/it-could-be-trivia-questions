@@ -77,9 +77,15 @@ export async function generate(): Promise<Array<RawQuestion>> {
   // templates pass through
   let templateData: Array<any> = await Promise.all(
     templateFilePaths.map(async (path: string) => {
-      return tomlToJson(await readFile(path));
+      try {
+        return tomlToJson(await readFile(path));
+      } catch (e) {
+        console.error(`Error reading generation file ${path}`);
+        throw e;
+      }
     })
   );
+  console.log("C");
 
   const generatedQuestions: Array<RawQuestion> = templateData
     .map(td => {

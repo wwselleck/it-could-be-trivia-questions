@@ -1,7 +1,6 @@
 export const enum QuestionType {
   MultipleAnswer = "multiple_answer",
-  SingleAnswer = "single_answer",
-  MultipleChoice = "multiple_choice"
+  SingleAnswer = "single_answer"
 }
 
 interface AutoFields {
@@ -18,16 +17,7 @@ export interface MultipleAnswerQuestion extends BaseQuestion {
   question_type_id: QuestionType.MultipleAnswer;
   detail: {
     text: string;
-    answer: Array<string>;
-  };
-}
-
-export interface MultipleChoiceQuestion extends BaseQuestion {
-  question_type_id: QuestionType.MultipleChoice;
-  detail: {
-    text: string;
-    choices: Array<string>;
-    answer: string;
+    answer: Array<Array<string>>;
   };
 }
 
@@ -39,7 +29,4 @@ export interface SingleAnswerQuestion extends BaseQuestion {
   };
 }
 
-export type Question =
-  | MultipleAnswerQuestion
-  | SingleAnswerQuestion
-  | MultipleChoiceQuestion;
+export type Question = MultipleAnswerQuestion | SingleAnswerQuestion;
