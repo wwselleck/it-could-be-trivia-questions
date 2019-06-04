@@ -4,8 +4,7 @@
  * it an exact answer?)
  */
 
-import * as SingleAnswerQuestion from './single_answer_question_answer';
+import * as SingleAnswerQuestion from "./single_answer_question_answer";
+import * as MultipleAnswerQuestion from "./multiple_answer_question_answer";
 
-export { SingleAnswerQuestion };
-
-
+export { SingleAnswerQuestion, MultipleAnswerQuestion };

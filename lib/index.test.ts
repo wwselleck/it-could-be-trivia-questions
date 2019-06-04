@@ -14,6 +14,18 @@ const createSingleAnswerQuestion = (
   }
 });
 
+const createMultipleAnswerQuestion = (
+  answer: Array<Array<string>>
+): TriviaQuestion.MultipleAnswerQuestion => ({
+  id: "abc",
+  question_type_id: TriviaQuestion.QuestionType.MultipleAnswer,
+  tags: ["whocares"],
+  detail: {
+    text: "a question",
+    answer
+  }
+});
+
 describe("Trivia Questions Library", () => {
   describe("getQuestionById", () => {});
   describe("Answer", () => {
@@ -105,6 +117,47 @@ describe("Trivia Questions Library", () => {
           answer
         );
         assert(result.isCorrect === false);
+      });
+    });
+    describe("MultipleAnswerQuestion", () => {
+      it("should accept a correct answer", () => {
+        let question = createMultipleAnswerQuestion([["A"], ["B"], ["C"]]);
+        let input = "B";
+        let result = TriviaQuestion.Answer.MultipleAnswerQuestion.verifyAnswer(
+          question,
+          input
+        );
+        assert(result.isCorrect === true);
+      });
+
+      it("should not accept an incorrect answer", () => {
+        let question = createMultipleAnswerQuestion([["A"], ["B"], ["C"]]);
+        let input = "BC";
+        let result = TriviaQuestion.Answer.MultipleAnswerQuestion.verifyAnswer(
+          question,
+          input
+        );
+        assert(result.isCorrect === false);
+      });
+
+      it("should return the correct ID of the answered answer", () => {
+        let question = createMultipleAnswerQuestion([["A"], ["B"], ["C"]]);
+        let input = "B";
+        let result = TriviaQuestion.Answer.MultipleAnswerQuestion.verifyAnswer(
+          question,
+          input
+        );
+        assert(result.answerId === "1");
+      });
+
+      it("should return the exact answer of the answered answer", () => {
+        let question = createMultipleAnswerQuestion([["A"], ["B"], ["C"]]);
+        let input = "b";
+        let result = TriviaQuestion.Answer.MultipleAnswerQuestion.verifyAnswer(
+          question,
+          input
+        );
+        assert(result.exactAnswer === "B");
       });
     });
   });
