@@ -1,6 +1,8 @@
 # It Could Be Trivia Questions
 
-The trivia questions collection and library that powers [It Could Be Trivia Bot](github.com/wwselleck/it-could-be-trivia-bot).
+A trivia questions collection and library for interacting with those questions.
+
+Please see [It Could Be Trivia Bot](github.com/wwselleck/it-could-be-trivia-bot) for an example of a project utilizing this library.
 
 ICBTQ exports two things:
 
@@ -53,7 +55,7 @@ These are questions that have one answer. For example...
 }
 ```
 
-### Multiple Answer Question (not yet supported)
+### Multiple Answer Question (supported)
 These are questions that have multiple correct answers. For example...
 
 > Name every colony in the original 13 U.S. colonies.
@@ -64,7 +66,7 @@ These are questions that have multiple correct answers. For example...
 
 ```json5
 {
-    question_type: 'single_answer'
+    question_type: 'multiple_answer'
     tags: ['video_games', 'pokemon']
 
     detail: {
@@ -96,27 +98,59 @@ These are questions that have multiple correct answers. For example...
 
 ## Usage
 
-### Example
 ```typescript
 import questions from '@it-could-be/trivia-questions/dist/questions.json';
 import * as TriviaQuestions from '@it-could-be/trivia-questions';
 
-const randomQuestion = TriviaQuestions.getRandomQuestion(questions);
-const result = TriviaQuestions.verifyAnswer(randomQuestion, 'some answer')
+TriviaQuestions.getRandomQuestion(
+    questions,
+    {
+        // An array of the types of questions you want to include [optional]
+        types: [TriviaQuestions.QuestionType.SingleAnswer, TriviaQuestions.QuestionType.MultipleAnswer]
+    }
+})
+
+let singleAnswerQuestion = TriviaQuestions.getRandomQuestion(questions, { types: [TriviaQuestions.QuestionType.SingleAnswer } })
+
+// A module for verifying answers
+let answerModule = TriviaQuestions.Answer;
+
+/*
+{
+    // Was the input a correct answer for the question?
+    isCorrect: false,
+
+    // If the answer was correct, was the input exact? For example,
+    // if the answer to a question is "Super Mario Bros.",
+    // the input "Super Mario Bros." is an exact answer, and
+    // "smb" is an inexact answer.
+    isExactAnswer: false,
+
+    // The exact answer for the question
+    exactAnswer: 'TheAnswer',
+}
+*/
+let answer = answerModule.SingleAnswerQuestion.verifyAnswer(singleAnswerQuestion, 'theanswer1')
+
+
+
+
+let multipleAnswerQuestion = TriviaQuestions.getRandomQuestion(questions, { types: [TriviaQuestions.QuestionType.MultipleAnswer } })
+
+/*
+{
+    isCorrect: correct,
+    isExactAnswer: false,
+    exactAnswer: 'TheAnswer',
+
+      // The ID of the answer that was answered correctly
+    answerId: '1'
+}
+*/
+let answer = answerModule.SingleAnswerQuestion.verifyAnswer(singleAnswerQuestion, 'someInput')
 ```
 
-### Library
-#### Importing
-The library is exported as just a collection of functions
-
-```typescript
-import * as TriviaQuestions from '@it-could-be/trivia-questions';
-```
-
-#### Functions
-tbd
-
-#### Types
+### Types
 To see specific type documentation, see `src/types.ts`, or the generated typedefs in the NPM package.
 
 
