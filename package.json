@@ -14,7 +14,7 @@
     "validate": "node ./scripts/validate.js",
     "build:questions": "ts-node ./scripts/build.ts",
     "build:lib": "tsc --declaration",
-    "build": "yarn clean && mkdir dist && mkdir dist/lib && yarn build:questions && yarn build:lib",
+    "build": "yarn clean && mkdir dist && yarn build:questions && yarn build:lib",
     "test": "mocha -r espower-typescript/guess \"lib/**/*.test.ts\""
   },
   "directories": {
