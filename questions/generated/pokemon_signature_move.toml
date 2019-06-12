@@ -1,0 +1,52 @@
+[[data]]
+values = ["7", 'Mewtwo']
+answer = ["Psystrike"]
+
+[[data]]
+values = ["7", 'Pikachu']
+answer = ["Volt Tackle"]
+
+[[data]]
+values = ["7", 'Machamp']
+answer = ["Strength"]
+
+[[data]]
+values = ["7", 'Exeggutor']
+answer = ["Barrage"]
+
+[[data]]
+values = ["1", 'Seaking']
+answer = ["Waterfall"]
+
+[[data]]
+values = ["1", 'Seaking']
+answer = ["Waterfall"]
+
+[[data]]
+values = ["2", 'Mr. Mime']
+answer = ["Substitute"]
+
+[[data]]
+values = ["2", 'Dragonite']
+answer = ["Outrage"]
+
+[[data]]
+values = ["7", 'Latias']
+answer = ["Mist Ball"]
+[[data]]
+
+values = ["7", 'Kyogre']
+answer = ["Origin Pulse"]
+
+[[data]]
+values = ["7", 'Ariados']
+answer = ["Toxic Thread"]
+
+[[data]]
+values = ["5", 'Walrein']
+answer = ["Ice Ball"]
+
+[template]
+question_type_id = "single_answer"
+tags = ["video_games", "pokemon"]
+text = "As of Gen %s, what was the Pokemon %s's signature move?"

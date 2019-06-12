@@ -1,0 +1,202 @@
+[[questions]]
+question_type_id = "single_answer"
+tags = ["video_games"]
+[questions.detail]
+text = "What is the only Pokemon to have a lower base state total than its pre-evolved form?"
+answer = ["Shedinja"]
+
+[[questions]]
+question_type_id = "single_answer"
+tags = ["video_games"]
+[questions.detail]
+text = "What is the best selling Nintendo 64 game that was never bundled with the console?"
+answer = ["Mario Kart 64"]
+
+[[questions]]
+question_type_id = "single_answer"
+tags = ["video_games"]
+[questions.detail]
+text = "Which Ghost-type Pokemon has the lowest total base stats?"
+answer = ["Shedinja"]
+
+[[questions]]
+question_type_id = "single_answer"
+tags = ["video_games"]
+[questions.detail]
+text = "The Mario series character Toad made their first appearance as a playable character in which game?"
+answer = ["Super Mario Bros. 2"]
+
+[[questions]]
+question_type_id = "single_answer"
+tags = ["video_games"]
+[questions.detail]
+text = "The Mario series character Toadsworth made their first appearance in which game?"
+answer = ["Super Mario Sunshine", "Sunshine"]
+
+[[questions]]
+question_type_id = "single_answer"
+tags = ["video_games"]
+[questions.detail]
+text = "Mario made his first appearance in which game?"
+answer = ["Donkey Kong"]
+
+[[questions]]
+question_type_id = "single_answer"
+tags = ["video_games"]
+[questions.detail]
+text = "The Mario series character Peach made their first appearance in which game?"
+answer = ["Super Mario Bros.", "Super Mario Bros. 1"]
+
+[[questions]]
+question_type_id = "single_answer"
+tags = ["video_games"]
+[questions.detail]
+text = "What game did Waluigi first appear in?"
+answer = ["Mario Tennis"]
+
+[[questions]]
+question_type_id = "single_answer"
+tags = ["video_games"]
+[questions.detail]
+text = "What is the name of the first Bowser level in Super Mario 64?"
+answer = ["Bowser in the Dark World", "Dark World"]
+
+[[questions]]
+question_type_id = "single_answer"
+tags = ["video_games"]
+[questions.detail]
+text = "In Super Mario Sunshine, a certain mission in what world must you complete before Yoshi is unlocked."
+answer = ["Pinna Park"]
+
+[[questions]]
+question_type_id = "single_answer"
+tags = ["video_games"]
+[questions.detail]
+text = "The name of your boat in The Legend of Zelda: Wind Waker is 'The King of Red ___'?"
+answer = ["Lions"]
+
+[[questions]]
+question_type_id = "single_answer"
+tags = ["video_games"]
+[questions.detail]
+text = "What game did Toadette first appear in?"
+answer = ["Mario Kart: Double Dash", "MKDD", "Mario Kart Double Dash"]
+
+[[questions]]
+question_type_id = "single_answer"
+tags = ["video_games"]
+[questions.detail]
+text = "What was the most recent game to feature Donkey Kong Jr. as a playable character?"
+answer = ["Mario Tennis"]
+
+[[questions]]
+question_type_id = "single_answer"
+tags = ["history"]
+[questions.detail]
+text = "What was the first city to reach a population of 1 million?"
+answer = ["Rome"]
+
+[[questions]]
+question_type_id = "single_answer"
+tags = ["video_games", "pokemon"]
+[questions.detail]
+text = "What fairy-type Pokemon has the highest base HP?"
+answer = ["Wigglytuff"]
+
+[[questions]]
+question_type_id = "single_answer"
+tags = ["video_games", "pokemon"]
+[questions.detail]
+text = "From Gen 3 onward, what were the color of the inside of a shiny Charizard's wings?"
+answer = ["Red"]
+
+[[questions]]
+question_type_id = "single_answer"
+tags = ["video_games", "pokemon"]
+[questions.detail]
+text = "Charizard was the inspiration for the name of 'Chilicola charizard', a species of what animal?"
+answer = ["Bees"]
+
+[[questions]]
+question_type_id = "single_answer"
+tags = ["video_games", "pokemon"]
+[questions.detail]
+text = "What is the only Pokemon whose base stat total does not change after evolution?"
+answer = ["Scyther"]
+
+[[questions]]
+question_type_id = "single_answer"
+tags = ["video_games", "pokemon"]
+[questions.detail]
+text = "Who was the first Pokemon programmed into the games?"
+answer = ["Rhyhorn"]
+
+[[questions]]
+question_type_id = "single_answer"
+tags = ["video_games", "pokemon"]
+[questions.detail]
+text = "What was the series of books called where the reader has to find a specific Pokemon in a large picture (similar to the Where's Waldo books)?"
+answer = ["Let's Find Pokemon!"]
+
+[[questions]]
+question_type_id = "single_answer"
+tags = ["video_games", "pokemon"]
+[questions.detail]
+text = "What is the category of the Pokemon Shellder?"
+answer = ["Bivalve"]
+
+[[questions]]
+question_type_id = "single_answer"
+tags = ["video_games", "pokemon"]
+[questions.detail]
+text = "Who is the gym leader of the only gym in the Pokemon series where there are no gym trainers you can fight?"
+answer = ["Jasmine"]
+
+[[questions]]
+question_type_id = "single_answer"
+tags = ["video_games"]
+[questions.detail]
+text = "What is the best selling video game console of all-time?"
+answer = ["PlayStation 2", "PS2"]
+
+[[questions]]
+question_type_id = "single_answer"
+tags = ["video_games"]
+[questions.detail]
+text = "What is the best selling portable game console of all-time?"
+answer = ["Nintendo DS", "DS"]
+
+[[questions]]
+question_type_id = "single_answer"
+tags = ["video_games"]
+[questions.detail]
+text = "What is the best selling game console that was released in the 1990s?"
+answer = ["PlayStation" "PS1"]
+
+[[questions]]
+question_type_id = "single_answer"
+tags = ["video_games"]
+[questions.detail]
+text = "What year was the Atari Jaguar released in North America?"
+answer = ["1993"]
+
+[[questions]]
+question_type_id = "single_answer"
+tags = ["video_games"]
+[questions.detail]
+text = "What console did Atari release as the successor to the Atari 2600?"
+answer = ["Atari 5200", "5200"]
+
+[[questions]]
+question_type_id = "single_answer"
+tags = ["video_games"]
+[questions.detail]
+text = "The Nintendo 64 launched in North America with two launch titles: Super Mario 64, and which other game?"
+answer = ["Pilotwings", "Pilotwings 64"]
+
+[[questions]]
+question_type_id = "single_answer"
+tags = ["video_games"]
+[questions.detail]
+text = "Who is the only pure flying-type Pokemon?"
+answer = ["Tornadus"]
