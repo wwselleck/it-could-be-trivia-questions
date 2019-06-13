@@ -1,6 +1,6 @@
 {
   "name": "@it-could-be/trivia-questions",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "main": "dist/index.js",
   "repository": "https://github.com/it-could-be/trivia-questions.git",
   "author": "<wwselleck@gmail.com>",
