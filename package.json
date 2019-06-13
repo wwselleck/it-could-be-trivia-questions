@@ -1,6 +1,6 @@
 {
   "name": "@it-could-be/trivia-questions",
-  "version": "0.0.5",
+  "version": "0.0.8",
   "main": "dist/index.js",
   "repository": "https://github.com/it-could-be/trivia-questions.git",
   "author": "<wwselleck@gmail.com>",
@@ -15,7 +15,8 @@
     "build:questions": "ts-node ./scripts/build.ts",
     "build:lib": "tsc --declaration",
     "build": "yarn clean && mkdir dist && yarn build:questions && yarn build:lib",
-    "test": "mocha -r espower-typescript/guess \"lib/**/*.test.ts\""
+    "test": "mocha -r espower-typescript/guess \"lib/**/*.test.ts\"",
+    "_publish": "yarn clean && yarn test && yarn build && npm publish"
   },
   "directories": {
     "test": "lib/"

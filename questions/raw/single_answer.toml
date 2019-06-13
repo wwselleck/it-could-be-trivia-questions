@@ -4,3 +4,38 @@ tags = ["history"]
 [questions.detail]
 text = "What was the first city to reach a population of 1 million?"
 answer = ["Rome"]
+
+[[questions]]
+question_type_id = "single_answer"
+tags = ["history"]
+[questions.detail]
+text = "Who was the first U.S. President to be impeached?"
+answer = ["Andrew Johnson"]
+
+[[questions]]
+question_type_id = "single_answer"
+tags = ["sports", "nba"]
+[questions.detail]
+text = "Who has the most career points in NBA history?"
+answer = ["Kareem Abdul-Jabbar"]
+
+[[questions]]
+question_type_id = "single_answer"
+tags = ["music"]
+[questions.detail]
+text = "What was the title of Black Sabbath's first album?"
+answer = ["Black Sabbath"]
+
+[[questions]]
+question_type_id = "single_answer"
+tags = ["music"]
+[questions.detail]
+text = "What is the best selling album fo all time?"
+answer = ["Thriller"]
+
+[[questions]]
+question_type_id = "single_answer"
+tags = ["music"]
+[questions.detail]
+text = "Who was the original lead vocalist of Pink Floyd?"
+answer = ["Syd Barrett"]

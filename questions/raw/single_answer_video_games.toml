@@ -142,8 +142,50 @@ answer = ["Let's Find Pokemon!"]
 question_type_id = "single_answer"
 tags = ["video_games", "pokemon"]
 [questions.detail]
+text = "During the development of Gen 1, which Pokemon's beta name was 'Ness'?"
+answer = ["Lapras"]
+
+[[questions]]
+question_type_id = "single_answer"
+tags = ["video_games", "pokemon"]
+[questions.detail]
+text = "What is the only single-type Pokemon to evolve from a dual-type?"
+answer = ["Bellossom"]
+
+[[questions]]
+question_type_id = "single_answer"
+tags = ["video_games", "pokemon"]
+[questions.detail]
+text = "Excluding megas and alternate forms, what Pokemon has the highest baseattack?"
+answer = ["Kartana"]
+
+[[questions]]
+question_type_id = "single_answer"
+tags = ["video_games", "pokemon"]
+[questions.detail]
+text = "What is the only Pokemon that is required to be a specific gender for an in-game trade?"
+answer = ["Dragonair"]
+
+[[questions]]
+question_type_id = "single_answer"
+tags = ["video_games", "pokemon"]
+[questions.detail]
 text = "What is the category of the Pokemon Shellder?"
 answer = ["Bivalve"]
+
+[[questions]]
+question_type_id = "single_answer"
+tags = ["video_games", "pokemon"]
+[questions.detail]
+text = "Which Pokemon was originally intended to be the mascot of the series, but was replaced with Pikachu?"
+answer = ["Clefairy"]
+
+[[questions]]
+question_type_id = "single_answer"
+tags = ["video_games", "pokemon"]
+[questions.detail]
+text = "Who has the highest base stat total of any non-legendary Pokemon?"
+answer = ["Slaking"]
 
 [[questions]]
 question_type_id = "single_answer"
@@ -171,7 +213,7 @@ question_type_id = "single_answer"
 tags = ["video_games"]
 [questions.detail]
 text = "What is the best selling game console that was released in the 1990s?"
-answer = ["PlayStation" "PS1"]
+answer = ["PlayStation", "PS1"]
 
 [[questions]]
 question_type_id = "single_answer"
@@ -196,7 +238,98 @@ answer = ["Pilotwings", "Pilotwings 64"]
 
 [[questions]]
 question_type_id = "single_answer"
-tags = ["video_games"]
+tags = ["video_games", "pokemon"]
 [questions.detail]
 text = "Who is the only pure flying-type Pokemon?"
 answer = ["Tornadus"]
+
+[[questions]]
+question_type_id = "single_answer"
+tags = ["video_games", "pokemon"]
+[questions.detail]
+text = "What was the first Pokemon to have alternate forms?"
+answer = ["Deoxys"]
+
+[[questions]]
+question_type_id = "single_answer"
+tags = ["video_games", "pokemon"]
+[questions.detail]
+text = "What is the only pure Rock-type third stage Pokemon?"
+answer = ["Gigalith"]
+
+[[questions]]
+question_type_id = "single_answer"
+tags = ["video_games", "pokemon"]
+[questions.detail]
+text = "What is the first Pokemon mentioned in the Pokerap?"
+answer = ["Electrode"]
+
+[[questions]]
+question_type_id = "single_answer"
+tags = ["video_games", "pokemon"]
+[questions.detail]
+text = "What is the first shiny Pokemon to appear in the Pokemon anime?"
+answer = ["Noctowl"]
+
+[[questions]]
+question_type_id = "single_answer"
+tags = ["video_games", "pokemon"]
+[questions.detail]
+text = "What Pokemon has the highest base special defense?"
+answer = ["Shuckle"]
+
+[[questions]]
+question_type_id = "single_answer"
+tags = ["video_games", "pokemon"]
+[questions.detail]
+text = "There are 3 poison-type Pokemon that are weak to dark-type moves, name one."
+answer = ["Gastly", "Haunter", "Gengar"]
+
+[[questions]]
+question_type_id = "single_answer"
+tags = ["video_games", "pokemon"]
+[questions.detail]
+text = "On average, what type of Pokemon has the highest base attack stat?"
+answer = ["Fighting"]
+
+[[questions]]
+question_type_id = "single_answer"
+tags = ["video_games"]
+[questions.detail]
+text = "What was the working title of the Nintendo Gamecube?"
+answer = ["Dolphin"]
+
+[[questions]]
+question_type_id = "single_answer"
+tags = ["video_games"]
+[questions.detail]
+text = "What was the working title of the Nintendo 64 when it was announced to the public?"
+answer = ["Ultra 64", "Nintendo Ultra 64"]
+
+[[questions]]
+question_type_id = "single_answer"
+tags = ["video_games"]
+[questions.detail]
+text = "What is the best-selling Nintendo exclusive game of all time?"
+answer = ["Wii Sports"]
+
+[[questions]]
+question_type_id = "single_answer"
+tags = ["video_games"]
+[questions.detail]
+text = "What professional sports team did Nintendo become the owner of in 1992?"
+answer = ["Seattle Mariners", "Mariners"]
+
+[[questions]]
+question_type_id = "single_answer"
+tags = ["video_games", "pokemon"]
+[questions.detail]
+text = "What is the least common type of Pokemon"
+answer = ["Ice"]
+
+[[questions]]
+question_type_id = "single_answer"
+tags = ["video_games", "pokemon"]
+[questions.detail]
+text = "What was the first game to be released by Valve?"
+answer = ["Half-Life", "Half-Life 1"]
