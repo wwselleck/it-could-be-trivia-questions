@@ -40,3 +40,10 @@ answer = [  ['Pikachu'],
             ['Dodrio'],
             ['Magikarp'],
             ['Gyarados'],  ]
+          
+[[questions]]
+question_type_id = "multiple_answer"
+tags = ["video_games"]
+[questions.detail]
+text = "What are the only three Pokemon that can be obtained in every possible Pokeball?"
+answer = [["Scyther"], ["Scizor"], ["Pinsir"],]
