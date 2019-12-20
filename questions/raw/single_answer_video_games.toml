@@ -322,6 +322,27 @@ answer = ["Seattle Mariners", "Mariners"]
 
 [[questions]]
 question_type_id = "single_answer"
+tags = ["video_games"]
+[questions.detail]
+text = "What was the highest selling Xbox 360 game?"
+answer = ["Kinect Adventures"]
+
+[[questions]]
+question_type_id = "single_answer"
+tags = ["video_games"]
+[questions.detail]
+text = "While in development, what was the Nintendo Switch's codename?"
+answer = ["Nintendo NX", "NX"]
+
+[[questions]]
+question_type_id = "single_answer"
+tags = ["video_games"]
+[questions.detail]
+text = "What was the highest selling Wii U game?"
+answer = ["Mario Kart 8"]
+
+[[questions]]
+question_type_id = "single_answer"
 tags = ["video_games", "pokemon"]
 [questions.detail]
 text = "What is the least common type of Pokemon"
@@ -330,6 +351,13 @@ answer = ["Ice"]
 [[questions]]
 question_type_id = "single_answer"
 tags = ["video_games", "pokemon"]
+[questions.detail]
+text = "What is the lowest selling (in USD) main series Pokemon game?"
+answer = ["Ice"]
+
+[[questions]]
+question_type_id = "single_answer"
+tags = ["video_games"]
 [questions.detail]
 text = "What was the first game to be released by Valve?"
 answer = ["Half-Life", "Half-Life 1"]
